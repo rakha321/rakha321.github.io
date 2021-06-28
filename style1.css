@@ -1,0 +1,135 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: sans-serif;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+}
+.medsos{
+	padding: 5px 0;
+	background-color: 	#3ae9a6; 
+}
+.medsos ul li{
+	display: inline-block;
+	color: white;
+	margin-right: 10px;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.container:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+header h1{
+	float: left;
+	padding: 15px 0;
+	color: 	#3ae9a6;
+}
+header h2{
+	float: left;
+	padding: 10px 0;
+	color: #3ae9a6;
+}
+header ul{
+	float: right;
+}
+header ul li{
+	display: inline-block;
+}
+header ul li a{
+	padding: 30px 25px;
+	display: inline-block;
+}
+header ul li a:hover{
+	background-color: #3ae9a6; 
+	color: white;
+}
+.active{
+	background-color: 	#3ae9a6; 
+	color: white;
+}
+.banner{
+	height: 90vh;
+	background-image: url(bg.jpg);
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner:after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(55,35,39,0.5);
+}
+.banner h2{
+	background-image: url(bg.jpg);
+	color:	#828b00;
+	z-index: 1;
+	padding: 20px 20px;
+	border: 8px groove 	#b2db70;
+	text-align: center;
+}
+
+
+section{
+	padding: 50px 0;
+}
+section h2{
+	background-color:	#c9e28d;
+	padding: 20px 0;
+	color: #7e8000;
+	text-align: center;
+
+}
+section h3{
+	text-align: center;
+	padding: 20px 0;
+	color: 	#d7e297;
+	margin-bottom: 20px;
+}
+section p{
+	color: 	#d7e297;
+	word-spacing: 2px;
+	line-height: 20px;
+	padding: 50px;
+	text-align:justify;
+}
+.biodata{
+	background-color: #c9e28d;
+}
+.biodata ul li{
+	text-align: center;
+	padding: 1px 0;
+	color: 	#999733;
+	margin-bottom: 10px;
+	display: block;
+}
+.pengalaman{
+	background-color: #c9e28d;
+	display: block;
+	margin-bottom: 10px;
+}
+.gallery{
+	background-color: #c9e28d;
+}
+.content{
+	background-color: #c9e28d;
+	display: block;
+	margin-bottom: 10px;
+
+}
+    
+    </style>
+</head>
+<body>
