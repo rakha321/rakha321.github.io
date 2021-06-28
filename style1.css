@@ -88,18 +88,18 @@ section{
 section h2{
 	background-color:	#6e3bb4;
 	padding: 20px 0;
-	color: #FFFFFF;
+	color: #000000;
 	text-align: center;
 
 }
 section h3{
 	text-align: center;
 	padding: 20px 0;
-	color: 	#FFFFFF;
+	color: 	#000000;
 	margin-bottom: 20px;
 }
 section p{
-	color: 	#FFFFFF;
+	color: 	#000000;
 	word-spacing: 2px;
 	line-height: 20px;
 	padding: 50px;
