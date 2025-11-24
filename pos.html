@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora POS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="pos.css">
+</head>
+<body>
+  <div class="gradient-bg"></div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">POS</div>
+      <div>
+        <p class="eyebrow">Rakha Premium Suite</p>
+        <h1>Aurora POS</h1>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="ghost-btn" onclick="window.location.href='index.html'">
+        <i class="fa-solid fa-arrow-left"></i>
+        Kembali ke Beranda
+      </button>
+      <button class="pill-btn">
+        <i class="fa-regular fa-circle-dot"></i>
+        Mode Premium Aktif
+      </button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel catalog">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Katalog pintar</p>
+          <h2>Daftar Produk</h2>
+        </div>
+        <div class="filters">
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" id="searchInput" placeholder="Cari produk, kategori, atau kode...">
+          </div>
+          <div class="chips" id="categoryChips"></div>
+        </div>
+      </div>
+      <div class="products-grid" id="productGrid"></div>
+    </section>
+
+    <section class="panel order">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Smart cart</p>
+          <h2>Pesanan Aktif</h2>
+        </div>
+        <div class="order-meta">
+          <div class="badge badge-success">
+            <i class="fa-solid fa-signal"></i>
+            Sinkron real-time
+          </div>
+          <div class="badge">
+            <i class="fa-solid fa-clock"></i>
+            <span id="clock"></span>
+          </div>
+        </div>
+      </div>
+      <div class="order-body">
+        <div class="cart" id="cartList"></div>
+        <div class="divider"></div>
+        <div class="summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">Rp0</span>
+          </div>
+          <div class="summary-row">
+            <span>Pajak (10%)</span>
+            <span id="tax">Rp0</span>
+          </div>
+          <div class="summary-row">
+            <span>Diskon Dinamis</span>
+            <div class="discount-control">
+              <input type="range" min="0" max="25" value="5" id="discountRange">
+              <span id="discountLabel">5%</span>
+            </div>
+          </div>
+          <div class="summary-row total">
+            <div>
+              <p>Total Pembayaran</p>
+              <small class="muted">Termasuk PPN dan diskon</small>
+            </div>
+            <span id="grandTotal">Rp0</span>
+          </div>
+          <div class="payment-row">
+            <div>
+              <label for="paymentMethod">Metode</label>
+              <select id="paymentMethod">
+                <option>QRIS</option>
+                <option>Kartu Debit</option>
+                <option>Transfer Bank</option>
+                <option>Tunai</option>
+              </select>
+            </div>
+            <div>
+              <label for="customerName">Nama Customer</label>
+              <input id="customerName" type="text" placeholder="Isi nama pelanggan">
+            </div>
+          </div>
+          <button class="primary-btn" id="checkoutBtn">
+            <div>
+              <p>Proses Transaksi</p>
+              <small>Struk digital akan dibuat otomatis</small>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel receipt">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Struk Digital</p>
+          <h2>Thermal preview</h2>
+        </div>
+        <div class="badge badge-soft">
+          <i class="fa-solid fa-shield-heart"></i>
+          Dijamin rapi
+        </div>
+      </div>
+      <div class="receipt-card" id="receiptCard">
+        <div class="receipt-head">
+          <div>
+            <p class="eyebrow">Aurora POS</p>
+            <h3>Ringkasan Belanja</h3>
+          </div>
+          <div class="tag">Premium</div>
+        </div>
+        <div class="receipt-info">
+          <div>
+            <p class="label">Customer</p>
+            <p id="receiptCustomer">-</p>
+          </div>
+          <div>
+            <p class="label">Metode</p>
+            <p id="receiptMethod">-</p>
+          </div>
+          <div>
+            <p class="label">Waktu</p>
+            <p id="receiptTime">-</p>
+          </div>
+        </div>
+        <div class="receipt-items" id="receiptItems"></div>
+        <div class="receipt-total">
+          <div><span>Subtotal</span><span id="receiptSubtotal">Rp0</span></div>
+          <div><span>Pajak 10%</span><span id="receiptTax">Rp0</span></div>
+          <div><span>Diskon</span><span id="receiptDiscount">-</span></div>
+          <div class="line"></div>
+          <div class="grand"><span>Total</span><span id="receiptGrand">Rp0</span></div>
+        </div>
+      </div>
+      <div class="microcopy">
+        <p><i class="fa-solid fa-wand-magic-sparkles"></i> Dibangun dengan gaya premium: animasi halus, glassmorphism, dan warna neon lembut untuk pengalaman kasir modern.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="pos.js"></script>
+</body>
+</html>
